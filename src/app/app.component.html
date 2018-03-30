@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row" id="grad" style="border-radius:1.5%">
+        <div class="col-md-12 col-md-push-12" >
+            <nav class="navbar navbar-expand-lg" >
+                    <div class="row">
+                        <div class="col-md-12 col-md-pull-3">
+                            <a class="navbar-brand" routerLink="/todos"><img src="https://s3-sa-east-1.amazonaws.com/prod-tenant-logos/5751c0d03746e628002823d1" height="30px" ></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </div>        
+                <div class="collapse navbar-collapse" id="navbarColor01">               
+                <form class="form-inline col-md-6 col-md-push-4 ">
+                    <input class="form-control mr-sm-2" id="inputSearch" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">   
+       <div class="col-md-3 col-md-pull-3">
+            <div class="row">   
+                    <div class="col-md-12 col-md-pull-12 ">
+                    <a class="link  btn btn-light col-md-12" id="todos" routerLink="/todos">
+                        <span class="col-md-12" >
+                            <svg style="margin-top: 1%" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
+                        </span>
+                        Todos
+                    </a>
+                </div>
+            </div>    
+            <div class="row">   
+              <div class="col-md-12 col-md-pull-12 ">
+                    <button  class="link btn btn-light col-md-12" name="lixeira">
+                        <span class="col-md-3">
+                                <svg style="margin-top: 1%" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                        </span> Lixeira
+                    </button>
+                </div>
+            </div>
+            <div class="row">   
+                <div class="col-md-12 col-md-pull-12 ">
+                    <button class="link btn btn-light col-md-12" name="atendido">
+                        <span class="col-md-3">
+                            <svg style="margin-top: 1%" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                            </svg>
+                        </span>
+                        Atendido
+                    </button>
+                </div>
+            </div> 
+               
+                 
+        </div>     
+        <div class="col-md-9 col-md-push-9">
+             <router-outlet></router-outlet>
+        </div>
+    </div>
+  
+</div>

@@ -1,0 +1,23 @@
+/*	--------------------------------------------------
+        ::Grid e efeitos de links
+        -------------------------------------------------- */
+#grad {
+  background: linear-gradient(to bottom right, #013750, #a5c139);
+}
+.link:hover {
+
+  transition:0.3s ease all;
+  color:#a5c139;
+  text-decoration: none;
+  
+}
+.link{
+  font-family: "Verdana", Geneva, sans-serif;
+  
+}
+
+
+a{
+   text-decoration: none; 
+  color: black;
+}

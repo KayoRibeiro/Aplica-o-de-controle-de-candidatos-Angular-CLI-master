@@ -1,0 +1,132 @@
+
+    <div class="row col-md-12">
+    <section class="content col-md-12">
+    <div id="wrapper">
+      
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">               
+                    <div class="row">
+                      <div class="col-md-1">
+                          <button class="btn btn-light" id="fecharDetalhe">
+                          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        </svg>
+                      </button>
+                      </div>
+                        <div class="col-sm-12 col-md-11 user-details" style="margin-top:2%">
+                                <div class="user-image">
+                                    <img src="a" style="border-radius:10%" id="imagemCandidato" >
+                                </div>
+                            <div class="row">
+                                <div class="user-info-block" >
+                                    <div class="user-heading" id="grad" >
+                                        <h3 id="cadidatoNome">name</h3>
+                                        <span class="help-block" id="local">Chandigarh, IN</span>
+                                    </div>
+                                    <div class="col-md-12 ">                                           
+                                              <button class="btn btn-light col-md-5 col-md-pull-5" data-toggle="tab" id="email" style="margin-left:6%">
+                                                  <span class=""><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                                    <path d="M13 7h-2v2h2V7zm0 4h-2v6h2v-6zm4-9.99L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                                                </svg></span>
+                                              </button>
+                                              <button class="btn btn-light col-md-5 col-md-pull-6" data-toggle="tab" id="dob">
+                                                  <span class=""><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>
+                                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                                </svg></span>
+                                              </button>
+                                   </div>
+                                    <div class="user-body">
+                                        <div name="tabelaDetalhesCandidato">
+                                            <div id="candidatoEmail" class="link" data-index="1">
+                                                <h4>Account Information</h4>
+                                            </div>
+                                            <div id="candidatoDob" class="link" data-index="2">
+                                                <h4>Settings</h4>
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                               </div> 
+                            </div>
+                      </div>  
+                </div>
+            <div class="col-md-12 col-md-offset-5">
+              <div class="panel panel-default  col-md-12 ">
+                <div class="panel-body col-md-12">        
+                  <div class="table-container col-md-12"> 
+                      <table class="table table-filter col-md-12" name="tabela" id="0" data-pag="1">
+                        <!-- <tbody><a *ngFor="let candidato of candidatos.results"
+                          [routerlink]="['/todos','candidato.email']"> -->
+                          <tr *ngFor="let candidato of candidatos.results; let i = index" [attr.data-index]="i" data-status="pendente" name="show" id="1">
+                          <a name="chamardetalhe">
+                            <td>
+                              <div class="pull-right">
+                              
+                                <img src="{{candidato.picture.medium}}" id="{{candidato.picture.large}}" style="border-radius:10%" name="imagemCandidato">
+                              
+                            </div>
+                            </td>
+                            <td>
+                              <div class="media pull-center">
+                              <div class="media-body pull-left">
+                                  <span class="media-meta " name="candidatoLocal">{{candidato.location.city}}, {{candidato.location.state}}</span>
+                                  <h4 class="title" name="candidatoNome">
+                                      {{candidato.name.first}} {{candidato.name.last}}
+                                    <span id ="status" class="pendente">(Pendente)</span>
+                                  </h4>
+                                  <p class="summary" name="candidatoEmail" id="{{candidato.dob}}">{{candidato.email}}, {{candidato.phone}}</p>
+                                </div>
+                              </div>
+                            </td>
+                            </a>
+                            <td >
+                              <button class="btn btn-light col-md-push-1" name="btn_atendido">
+                                  <svg style="margin-top: 1%" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                                  </svg>
+                              </button>
+                            </td>
+                            <td >
+                                <button class="btn btn-light col-md-pull-1" name="btn_lixo">
+                                    <svg style="margin-top: 1%" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                                      <path d="M0 0h24v24H0z" fill="none"/>
+                                    </svg>
+                                </button>
+                              </td>
+                              <td>
+                                  <button class="btn btn-light col-md-pull-3" name="btn_todos">
+                                      <svg style="margin-top: 1%" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M0 0h24v24H0z" fill="none"/>
+                                          <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                      </svg>
+                                </button>
+                              </td>
+                              <a name="chamardetalhe"></a>                             
+                          </tr>
+                        <!-- </a> -->
+                        </tbody>
+                      </table> 
+                      <div class="col-md-12" name="grid" >
+                        
+                        <table id="tabelaPag">
+                          <tr id="paginas">
+
+                          </tr>
+                        </table>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div>  
+         </div>
+        </section> 
+      </div>
+  
+
+ 
