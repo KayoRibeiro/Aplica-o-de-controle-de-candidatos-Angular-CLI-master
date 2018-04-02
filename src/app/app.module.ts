@@ -6,7 +6,7 @@ import { TodosComponent } from './todos/todos.component';
 import { FormsModule } from '@angular/forms';
 import {ApiCandidatosService} from './api-candidatos.service';
 import { HttpClientModule} from '@angular/common/http';
-import { PersonComponent } from './person/person.component';
+
 import { candidatoResolver } from './todos/cadidato.resolver';
 
 
@@ -14,7 +14,7 @@ import { candidatoResolver } from './todos/cadidato.resolver';
   declarations: [
     AppComponent,
     TodosComponent,    
-    PersonComponent
+    
     
   ],
   imports: [
